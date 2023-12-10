@@ -1,0 +1,153 @@
+/*seletor é quem vc quer formatar
+propriedade o que vc quer alterar
+
+dontpad.com/
+google fonts
+
+seletor{
+    propriedade: valor:
+}*/
+
+/* font-family: 'Bebas Neue', sans-serif;
+font-family: 'Roboto', sans-serif; */
+
+
+
+body{
+    margin: 0;
+    font-family: 'Roboto', sans-serif; 
+    padding: 0;
+}
+
+h1{
+    font-size: 64px;
+    color: #003366;
+    margin: 0px;
+    margin-top: 100px;
+}
+
+h2{
+    font-size: 32px;
+    color: #333333;
+    margin: 0px;
+}
+
+p {
+    font-size: 20px;
+    color: #666666;
+}
+
+ul{
+    margin: 0px;
+}
+
+/*tivemos que fazer um novo PAI , para selecionarmos como Pai.*/
+.container{
+    display: flex;
+    /* align-items: center; */
+}
+
+.sidebar{
+
+        padding-top: 100px;
+        position: sticky;
+        background-color: #003366;
+        width: 280px;
+        height: 1477.6px; /*altura -> (vh) view height -> unidade no navegador (baseada na alura do navegador). Fica 100% na tela*/
+        display: flex;
+        /*align-items: center ; /*(mexe no eixo y vertical)*/
+        justify-content: center; /*(mexe no eixo x horizontal)*/
+        text-align: center; /*alinha o texto nesse caso centralizou, center*/
+}
+  
+/*formatando a lista que estiver dentro do sidebar*/
+.perfil{
+    border-radius: 50%;
+    
+}
+
+.sidebar ul{
+        list-style-type: none /*retira o marcado da lista com o none, com esse list podemos mudar o carcter em ordinal quadrado , círculo e etc*/;
+        padding: 0;
+        margin-top: 65px;
+        margin-bottom: 65px;
+}
+
+.sidebar li{
+    margin-bottom: 30px;
+}
+
+/*formatando os links que estiverem dentro da <ul> dentro do sidebar*/
+.sidebar ul a{
+    color: #ffffff;
+    text-decoration: none; /*retira o sublinhado do link*/
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+}
+
+.sidebar ul a:hover{
+    color: yellow;
+}
+
+.midias a{
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.content{
+    width: 986px;
+    margin-left: 50px;      
+    
+}
+
+.content h2{
+    margin-top: 100px;
+}
+
+/* .content p{
+    font-size: 20px;
+} */
+
+.content ul{
+    
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+/* Para telas de até 1279px
+Media Queries */
+
+@media (max-width: 1279px){
+
+    h1{font-size: 32px;}
+
+    h2{font-size: 24px;}
+    
+    p{font-size: 16px;}
+
+    .content{
+        width: 75%;
+        margin-left: 25px;
+    }
+    .sidebar{width: 25%;}
+
+    .sidebar ul a{font-size: 16px;}
+
+    .perfil{width: 80px;}
+
+    .midias a{
+        margin-left: 3px;
+        margin-right: 3px;
+    }
+
+    .midias img {width: 25px;}
+
+        @midia (max-width: 450px){
+            .sidebar {width:30%;}
+
+            h2{font-size: 18px}
+        }
+
+}
+
+    
+
